@@ -10,6 +10,7 @@ namespace Practice_2017_4
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
