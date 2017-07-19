@@ -41,9 +41,9 @@ namespace Practice_2017_4
         {
             Console.Write("Введите точность: ");
             double eps = ReadDouble(), sum = 1, nextEl = 2;
-            if (eps > sum) return sum;                   // Если эпсилон будет больше единицы
-            long fact = 1;                               // Переменная для хранения факториала
-            for (int i = 1; Math.Abs(nextEl) > eps; i++) // Считать до заданной точности
+            if (eps > sum) return sum;                               // Если эпсилон будет больше единицы
+            long fact = 1;                                           // Переменная для хранения факториала
+            for (int i = 1; fact > 0 && Math.Abs(nextEl) > eps; i++) // Считать до заданной точности или пока факториал не сойдёт с ума
             {
                 sum += nextEl;
                 fact *= i;
@@ -55,7 +55,7 @@ namespace Practice_2017_4
         static void Main(string[] args)
         {
             Console.WriteLine("\nБесконечная сумма (по формуле: ((-2)^i)/i!, i=0) с заданной точностью (eps>0)= " + CountInfSum());
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
